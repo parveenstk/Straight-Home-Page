@@ -452,38 +452,44 @@
                </div>
                <div class="col-md-6">
                   <div class="offer-tabs">
+
+                     <!-- Choose Your Offer -->
                      <h3>CHOOSE YOUR OFFER</h3>
                      <div class="selectcol d-flex align-items-center gap-0">
+                        <!-- Low Sugar -->
                         <div class="tabs flex-fill w-100">
-                           <input type="radio" id="radio1" name="radios" value="all" checked>
+                           <input type="radio" id="radio1" name="radios" value="low-sugar" checked>
                            <label for="radio1" class="d-flex justify-content-center left-side">Low Sugar</label>
                         </div>
+                        <!-- Sugar-Free -->
                         <div class="tabs flex-fill w-100">
-                           <input type="radio" id="radio2" name="radios" value="all">
+                           <input type="radio" id="radio2" name="radios" value="sugar-free">
                            <label for="radio2" class="d-flex justify-content-center right-side">Sugar-Free</label>
                         </div>
                      </div>
                      <div class="autoship">
                         <h3>AutoShip & Save</h3>
                         <div class="select-parsone-option">
+                           <!-- One People -->
                            <div class="inner-option d-flex justify-content-between price-details-active mb-3">
                               <div class="price-details">
                                  <p class="person">One Person</p>
-                                 <p class="amout"><strong>$59.99</strong> <del>$79.99</del></p>
-                                 <p class="sub-tag">$2.14 Per Day</p>
+                                 <p id="op-amount" class="amout"><strong>$59.99</strong> <del>$79.99</del></p>
+                                 <p id="op-perday-amount" class="sub-tag">$2.14 Per Day</p>
                               </div>
                               <div class="offer-details">
                                  <a class="btn btn-danger">25% off</a>
                               </div>
                            </div>
+                           <!-- Two People -->
                            <div class="inner-option d-flex justify-content-between">
                               <div class="price-details">
                                  <p class="person">Two People</p>
-                                 <p class="amout"><strong>$114.00</strong> <del>$159.98</del></p>
-                                 <p class="sub-tag">$2.03 Per Day</p>
+                                 <p id="tp-amount" class="amout"><strong>$114.00</strong> <del>$159.98</del></p>
+                                 <p id="tp-perday-amount" class="sub-tag">$2.03 Per Day</p>
                               </div>
                               <div class="offer-details">
-                                 <a class="btn btn-danger">25% off</a>
+                                 <a class="btn btn-danger">29% off</a>
                               </div>
                            </div>
                         </div>
@@ -491,7 +497,7 @@
                            <div class="col d-flex align-items-start mb-1">
                               <div class="icon-square flex-shrink-0 me-2"><i class="fas fa-check"></i></div>
                               <div>
-                                 <p>56 packs every 4 weeks (448 gummies)</p>
+                                 <p id="pack-info">28 packs every 4 weeks (224 gummies)</p>
                               </div>
                            </div>
                            <div class="col d-flex align-items-start mb-1">
@@ -517,13 +523,15 @@
                            <div class="btn d-block btn-danger">Start Now</div>
                         </div>
                      </div>
+                     <!-- Try Once -->
                      <div class="try-once">
-                        <div class="price-details">
+                        <div id="tryOncePrice" class="price-details">
                            <p class="person">Try Once</p>
-                           <p class="amout">$79.99</p>
-                           <p class="sub-tag">$2.85 Per Day</p>
+                           <p id="tryonce-price" class="amout">$79.99</p>
+                           <p id="tryonce-perday-price" class="sub-tag">$2.85 Per Day</p>
                         </div>
-                        <div class="close-div">
+                        <!-- NO Free Ship -->
+                        <div id="no-free-ship" class="close-div">
                            <hr>
                            <div class="col d-flex align-items-start mb-1">
                               <div class="icon-square flex-shrink-0 me-2"><i class="fas fa-times"></i></div>
@@ -1422,6 +1430,84 @@
       video.addEventListener('ended', () => {
          playPauseIcon.src = 'images/play.png';
       });
+
+      // Choose Your Offers Function
+      document.addEventListener("DOMContentLoaded", function () {
+         const allOptions = document.querySelectorAll('.inner-option');
+         const packInfo = document.getElementById('pack-info');
+
+         allOptions.forEach(function (option, index) {
+            option.addEventListener('click', function () {
+               // Remove active class from all
+               allOptions.forEach(function (item) {
+                  item.classList.remove('price-details-active');
+               });
+
+               // Add active class to the clicked one
+               option.classList.add('price-details-active');
+
+               // Update the text based on which option was selected
+               packInfo.textContent = index === 0
+                  ? '28 packs every 4 weeks (224 gummies)'
+                  : '56 packs every 4 weeks (448 gummies)';
+            });
+         });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+         const lowSugarRadio = document.getElementById("radio1");
+         const sugarFreeRadio = document.getElementById("radio2");
+         const onePersonAmount = document.getElementById("op-amount");
+         const onePersonPerDay = document.getElementById("op-perday-amount");
+         const twoPersonAmount = document.getElementById("tp-amount");
+         const twoPersonPerDay = document.getElementById("tp-perday-amount");
+         const tryOnce = document.getElementById('tryonce-price');
+         const tryOncePerDay = document.getElementById('tryonce-perday-price')
+
+         function updatePrices(type) {
+            if (type === "low-sugar") {
+               onePersonAmount.innerHTML = "<strong>$59.99</strong> <del>$79.99</del>";
+               onePersonPerDay.textContent = "$2.14 Per Day";
+
+               twoPersonAmount.innerHTML = "<strong>$114.00</strong> <del>$159.98</del>";
+               twoPersonPerDay.textContent = "$2.03 Per Day";
+
+               tryOnce.textContent = "$79.99"
+               tryOncePerDay.textContent = "$2.85 Per Day"
+            } else if (type === "sugar-free") {
+               onePersonAmount.innerHTML = "<strong>$65.99</strong> <del>$87.99</del>";
+               onePersonPerDay.textContent = "$2.36 Per Day";
+
+               twoPersonAmount.innerHTML = "<strong>$125.40</strong> <del>$175.98</del>";
+               twoPersonPerDay.textContent = "$2.23 Per Day";
+
+               tryOnce.textContent = "$87.99"
+               tryOncePerDay.textContent = "$3.14 Per Day"
+            }
+         }
+
+         // Set up event listeners
+         lowSugarRadio.addEventListener("change", function () {
+            if (this.checked) updatePrices("low-sugar");
+         });
+
+         sugarFreeRadio.addEventListener("change", function () {
+            if (this.checked) updatePrices("sugar-free");
+         });
+
+         // Optional: Trigger initial update
+         updatePrices(document.querySelector('input[name="radios"]:checked').value);
+      });
+
+      // hiding the "try once price" on click
+      document.addEventListener("DOMContentLoaded", function () {
+         document.getElementById("tryOncePrice").onclick = function () {
+            const noFreeShip = document.getElementById("no-free-ship");
+            noFreeShip.style.display = (noFreeShip.style.display === "none" || noFreeShip.style.display === "")
+               ? "block" : "none";
+         };
+      });
+
    </script>
 </body>
 

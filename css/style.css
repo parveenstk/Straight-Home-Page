@@ -517,6 +517,10 @@ ul {
     margin-bottom: 0px;
 }
 
+.price-details {
+    cursor: pointer;
+}
+
 .inner-option {
     border-radius: 20px;
     border: 1px solid #000;
