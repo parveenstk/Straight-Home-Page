@@ -99,6 +99,13 @@ ul {
 
 }
 
+.inner-option {
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 20px 20px 25px;
+    cursor: pointer;
+}
+
 .top-header {
     background: #ff073a;
     font-weight: 500;
@@ -519,12 +526,6 @@ ul {
 
 .price-details {
     cursor: pointer;
-}
-
-.inner-option {
-    border-radius: 20px;
-    border: 1px solid #000;
-    padding: 20px 20px 25px;
 }
 
 .price-details-active {
