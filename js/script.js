@@ -64,12 +64,3 @@ faqButtons.forEach(btn => {
 		}
 	});
 });
-
-function scrollToResponsiveSection() {
-	const isMobile = window.innerWidth <= 768; // adjust as needed
-	const targetId = isMobile ? 'getYourGummiesMob' : 'getYourGummiesDesk';
-	const targetElement = document.getElementById(targetId);
-	if (targetElement) {
-		targetElement.scrollIntoView({ behavior: 'smooth' });
-	}
-}
