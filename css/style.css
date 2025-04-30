@@ -1,102 +1,59 @@
 @font-face {
-
     font-family: 'super_boysregular';
-
     src: url('../font/super_boys-webfont.woff2') format('woff2'),
-
         url('../font/super_boys-webfont.woff') format('woff'),
-
         url('../font/super_boys-webfont.ttf') format('truetype');
-
     font-weight: normal;
-
     font-style: normal;
-
 }
 
 @font-face {
-
     font-family: 'century_gothicregular';
-
     src: url('../font/centurygothic-webfont.eot');
-
     src: url('../font/centurygothic-webfont.eot?#iefix') format('embedded-opentype'),
-
         url('../font/centurygothic-webfont.woff2') format('woff2'),
-
         url('../font/centurygothic-webfont.woff') format('woff'),
-
         url('../font/centurygothic-webfont.ttf') format('truetype');
-
     font-weight: normal;
-
     font-style: normal;
-
 }
 
 @font-face {
-
     font-family: 'century_gothicbold';
-
     src: url('../font/centurygothic_bold-webfont.eot');
-
     src: url('../font/centurygothic_bold-webfont.eot?#iefix') format('embedded-opentype'),
-
         url('../font/centurygothic_bold-webfont.woff2') format('woff2'),
-
         url('../font/centurygothic_bold-webfont.woff') format('woff'),
-
         url('../font/centurygothic_bold-webfont.ttf') format('truetype');
-
     font-weight: normal;
-
     font-style: normal;
-
 }
 
 h1,
-
 h2,
-
 h3 {
-
     font-family: 'super_boysregular';
     text-transform: uppercase;
-
 }
 
 body {
-
     font-family: 'century_gothicregular';
-
     font-weight: normal;
-
     font-style: normal;
-
     font-size: 18px;
-
 }
 
 p {
-
     font-family: 'century_gothicregular';
-
     font-weight: normal;
-
     font-style: normal;
-
     font-size: 18px;
-
 }
 
 ul {
-
     font-family: 'century_gothicregular';
-
     font-weight: normal;
-
     font-style: normal;
-
 }
 
 .inner-option {
@@ -164,7 +121,6 @@ ul {
 .main-head {
     font-size: 18px;
     margin: 7px 0px 0px 9px;
-
 }
 
 .main-head b {
@@ -239,7 +195,6 @@ ul {
 }
 
 .second-ul li img {
-
     width: 70px;
     filter: brightness(0.5);
 }
@@ -354,7 +309,6 @@ ul {
 
 .fifth-last li {
     margin-bottom: 6px;
-
 }
 
 .faq-container {
@@ -451,13 +405,10 @@ ul {
 
 .product-thumbs .swiper-slide {
     padding: 0px 5px;
-
 }
 
 /*slider*/
-
 /*Offer-pages*/
-
 .offerpage {
     padding: 80px 0;
 }
@@ -570,7 +521,7 @@ p.amout del {
 .start .btn {
     box-shadow: 5px 5px 0px 0px #002613FF;
     background: #FF073A;
-    padding: 11px 50px 15px 50px;
+    padding: 11px 50px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 50px;
@@ -674,9 +625,7 @@ p.amout del {
 }
 
 /*Offer-pages*/
-
 /*review*/
-
 .reviews-contant {
     display: flex;
     position: relative;
@@ -785,10 +734,74 @@ img {
 }
 
 .video-testimonial .controls {
+    /*position: absolute;
+z-index: 2;
+bottom: 30px;
+left: 10px;*/
     position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 2;
-    bottom: 30px;
-    left: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.video-pop .controls button {
+    border: none;
+    background: none;
+    padding: 0px;
+}
+
+.video-pop .controls {
+    /*position: absolute;
+z-index: 2;
+bottom: 30px;
+left: 10px;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 333;
+    width: 32px;
+    height: 32px;
+    background: #000 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='%23ffffff' fill='none' stroke-width='2'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M6 18L18 6M6 6l12 12' /%3e%3c/svg%3e") no-repeat center center;
+    background-size: 70%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.modal-body.video-pop {
+    padding: 5px;
+}
+
+.modal-header {
+    padding: 0px;
+}
+
+.video-fullscreen {
+    position: absolute;
+    bottom: 5%;
+    right: -3%;
+    z-index: 2;
+    background: #fff700;
+    padding: 10px;
+    transform: translate(-50%, -0%);
+    border-radius: 70px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #000000;
 }
 
 .video-testimonial video {
@@ -851,7 +864,6 @@ img {
 }
 
 /*Reviews*/
-
 .sufficient .btn {
     padding-left: 25px;
     padding-right: 25px;
@@ -1019,7 +1031,6 @@ button.accordion-button {
 }
 
 /*Fotoer*/
-
 .webverion {
     display: initial;
 }
@@ -1049,5 +1060,4 @@ button.accordion-button {
     .start .btn {
         font-size: 14px;
     }
-
 }
