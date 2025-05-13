@@ -28,17 +28,17 @@ if ($(".product-left").length) {
 // product left end ---------->
 
 // Hambuger Menu (Mobile Screen)
-const toggleBtn = document.getElementById('menu-toggle');
-const sidebar = document.getElementById('mobile-sidebar');
-const closeBtn = document.getElementById('close-sidebar');
+// const toggleBtn = document.getElementById('menu-toggle');
+// const sidebar = document.getElementById('mobile-sidebar');
+// const closeBtn = document.getElementById('close-sidebar');
 
-toggleBtn.addEventListener('click', () => {
-	sidebar.classList.add('show');
-})
+// toggleBtn.addEventListener('click', () => {
+// 	sidebar.classList.add('show');
+// })
 
-closeBtn.addEventListener('click', () => {
-	sidebar.classList.remove('show');
-});
+// closeBtn.addEventListener('click', () => {
+// 	sidebar.classList.remove('show');
+// });
 
 // FAQs Animation Script
 const faqButtons = document.querySelectorAll('.faq-alt-question');
