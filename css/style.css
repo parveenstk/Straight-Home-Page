@@ -1,76 +1,107 @@
 @font-face {
-    font-family: 'super_boysregular';
-    src: url('../font/super_boys-webfont.woff2') format('woff2'),
-        url('../font/super_boys-webfont.woff') format('woff'),
-        url('../font/super_boys-webfont.ttf') format('truetype');
+    font-family: "Super Caramel";
+    src: url("../font/SuperCaramel.woff2") format("woff2"),
+        url("../font/SuperCaramel.woff") format("woff");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'century_gothicregular';
-    src: url('../font/centurygothic-webfont.eot');
-    src: url('../font/centurygothic-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/centurygothic-webfont.woff2') format('woff2'),
-        url('../font/centurygothic-webfont.woff') format('woff'),
-        url('../font/centurygothic-webfont.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Century Gothic';
+    src: url('../font/CenturyGothic-Bold.woff2') format('woff2'),
+        url('../font/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
+    font-display: swap;
+}
+
+/*@font-face {
+  font-family: "super_boysregular";
+
+  src: url("../font/super_boys-webfont.woff2") format("woff2"),
+    url("../font/super_boys-webfont.woff") format("woff"),
+    url("../font/super_boys-webfont.ttf") format("truetype");
+
+  font-weight: normal;
+
+  font-style: normal;
+}*/
+
+/*@font-face {
+  font-family: "century_gothicregular";
+
+  src: url("../font/centurygothic-webfont.eot");
+
+  src: url("../font/centurygothic-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/centurygothic-webfont.woff2") format("woff2"),
+    url("../font/centurygothic-webfont.woff") format("woff"),
+    url("../font/centurygothic-webfont.ttf") format("truetype");
+
+  font-weight: normal;
+
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'century_gothicbold';
-    src: url('../font/centurygothic_bold-webfont.eot');
-    src: url('../font/centurygothic_bold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/centurygothic_bold-webfont.woff2') format('woff2'),
-        url('../font/centurygothic_bold-webfont.woff') format('woff'),
-        url('../font/centurygothic_bold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+  font-family: "century_gothicbold";
+
+  src: url("../font/centurygothic_bold-webfont.eot");
+
+  src: url("../font/centurygothic_bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/centurygothic_bold-webfont.woff2") format("woff2"),
+    url("../font/centurygothic_bold-webfont.woff") format("woff"),
+    url("../font/centurygothic_bold-webfont.ttf") format("truetype");
+
+  font-weight: normal;
+
+  font-style: normal;
+}*/
 
 h1,
 h2,
 h3 {
-    font-family: 'super_boysregular';
-    text-transform: uppercase;
+    /*    font-family: 'Super Caramel';*/
+    font-family: "Super Caramel";
 }
 
 body {
-    font-family: 'century_gothicregular';
+    font-family: 'Century Gothic';
+
     font-weight: normal;
+
     font-style: normal;
+
     font-size: 18px;
 }
 
 p {
-    font-family: 'century_gothicregular';
+    font-family: 'Century Gothic';
+    line-height: normal;
     font-weight: normal;
+
     font-style: normal;
+
     font-size: 18px;
 }
 
 ul {
-    font-family: 'century_gothicregular';
+    font-family: 'Century Gothic';
+
     font-weight: normal;
+
     font-style: normal;
+
+    font-size: 18px;
 }
 
-.getYourYomzBtn {
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-top: 10px;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-
-    box-shadow: 5px 5px 0px 0px #002613FF;
-    background: #FF073A;
-    padding: 11px 50px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+b,
+strong {
+    font-weight: bolder;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .inner-option {
@@ -81,34 +112,41 @@ ul {
 }
 
 .top-header {
-    background: #ff073a;
+    background: #E6193C;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     word-spacing: 3px;
 }
 
 .sticky-top {
-    background: #00e7ff;
+    background: #1EB9F0;
 }
 
 .logo img {
-    width: 120px;
+    width: 140px;
 }
 
 .header button {
     background: none;
-    border: 1px solid #000;
+    border: 1px solid #ffeb00;
     border-radius: 20px;
-    color: #000;
+    color: #000000;
     font-size: 12px;
     padding: 4px 12px 4px 12px;
     margin: 0px 21px 0px 0px;
+    background: #ffeb00;
+    font-weight: 900;
 }
 
 .acc {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.acc:hover {
+    color: #000;
 }
 
 .icon-cart {
@@ -119,7 +157,7 @@ ul {
 }
 
 .banner {
-    background-color: #fff700;
+    background-color: #FFEB00;
 }
 
 .banner .start .btn {
@@ -127,7 +165,7 @@ ul {
 }
 
 .main img {
-    width: 90%;
+    width: 100%;
 }
 
 .star label {
@@ -145,20 +183,21 @@ ul {
 }
 
 .mainsec h2 {
-    font-size: 39px;
+    font-size: 48px;
     letter-spacing: 0px;
     margin-bottom: 0px;
+    text-transform: uppercase;
 }
 
 .mainsec h2 span {
-    color: #ff073a;
+    color: #E6193C;
 }
 
 .mainsec button {
-    background: #ff073a;
+    background: #E6193C;
     color: white;
-    border: 2px solid #fff700;
-    box-shadow: 2px 4px 0px 2px #fff700;
+    border: 2px solid #FFEB00;
+    box-shadow: 2px 4px 0px 2px #FFEB00;
     border-radius: 50px;
     padding: 8px 17px 7px 17px;
     font-weight: 500;
@@ -229,8 +268,19 @@ ul {
     padding: 80px 0;
 }
 
+.lei {
+    margin-left: -10px;
+}
+
+.travel-prag {
+    font-size: 28px !important;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
 .transform h3 {
     font-size: 38px;
+    text-transform: uppercase;
 }
 
 .trusimage img {
@@ -265,12 +315,13 @@ ul {
 }
 
 .leaves {
-    background-color: #fff700;
+    background-color: #FFEB00;
     padding: 60px 0px 60px 0px;
 }
 
 .leaves h3 {
     font-size: 38px;
+    text-transform: uppercase;
 }
 
 .forth-ul li h2 {
@@ -329,9 +380,7 @@ ul {
 }
 
 .faq-container {
-    width: 600px;
     margin: 50px auto;
-    font-family: Arial, sans-serif;
 }
 
 .faq {
@@ -346,8 +395,8 @@ ul {
     display: flex;
     padding: 16px 0px 16px 0px;
     cursor: pointer;
-    font-weight: 500;
-    font-size: 17px;
+    font-weight: 800;
+    font-size: 18px;
 }
 
 .faq .answer {
@@ -432,6 +481,7 @@ ul {
 
 .offerpage h3 {
     font-size: 38px;
+    text-transform: uppercase;
 }
 
 .offerpage .star {
@@ -470,7 +520,7 @@ ul {
 }
 
 .selectcol input[type="radio"]:checked+label {
-    background: #FF073A !important;
+    background: #E6193C !important;
     color: #fff;
 }
 
@@ -524,8 +574,7 @@ p.amout del {
     font-weight: 700;
     border-radius: 50px;
     padding: 3px 20px;
-    background: #FF073A !important;
-    text-wrap: nowrap;
+    background: #E6193C !important;
 }
 
 .optin-list p {
@@ -537,14 +586,19 @@ p.amout del {
 }
 
 .start .btn {
-    box-shadow: 5px 5px 0px 0px #002613FF;
-    background: #FF073A;
+    box-shadow: 5px 5px 0px 0px #000000;
+    background: #694191;
     padding: 11px 50px;
     font-size: 20px;
     font-weight: 600;
     border-radius: 50px;
     margin-bottom: 20px;
     text-transform: uppercase;
+    border: none;
+}
+
+.start .btn:hover {
+    background: #F0A0C3;
 }
 
 .autoship {
@@ -663,18 +717,19 @@ p.amout del {
 
 .reviews {
     padding: 60px 0;
-    background: #fff700;
+    background: #FFEB00;
 }
 
 .reviews h3 {
     text-align: center;
     font-size: 38px;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    background: #ff073a;
+    background: #E6193C;
     color: #fff !important;
 }
 
@@ -809,7 +864,7 @@ left: 10px;*/
     bottom: 5%;
     right: -3%;
     z-index: 2;
-    background: #fff700;
+    background: #FFEB00;
     padding: 10px;
     transform: translate(-50%, -0%);
     border-radius: 70px;
@@ -892,6 +947,7 @@ left: 10px;*/
 
 .sufficient h3 {
     font-size: 38px !important;
+    text-transform: uppercase;
 }
 
 .sufficient {
@@ -915,10 +971,11 @@ left: 10px;*/
     font-size: 38px !important;
     text-align: center;
     margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 .red-color {
-    color: #FF073A;
+    color: #E6193C;
 }
 
 .olympians-details p {
@@ -944,6 +1001,10 @@ left: 10px;*/
     background: none !important;
     font-size: 22px;
     text-transform: uppercase;
+}
+
+.faqs .accordion-button:not(.collapsed) {
+    color: #000;
 }
 
 button.accordion-button {
@@ -1000,7 +1061,7 @@ button.accordion-button {
 
 .ftr-form button {
     height: 50px;
-    background: #fff700;
+    background: #FFEB00;
     color: #000;
     font-size: 18px;
     font-weight: 600;
@@ -1010,6 +1071,7 @@ button.accordion-button {
 
 .footer-social-media ul {
     margin: 0px;
+    padding: 0px;
 }
 
 .footer-social-media li {
@@ -1021,7 +1083,7 @@ button.accordion-button {
 }
 
 .footer-social-media li a img {
-    width: 40px;
+    width: 30px;
 }
 
 .footer-list p {
@@ -1058,6 +1120,216 @@ button.accordion-button {
 }
 
 @media screen and (max-width:767px) {
+
+    .sec-1 img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tastelike .gap-5 {
+        gap: 2rem !important;
+    }
+
+    .offerpage .justify-content-center.align-items-center {
+        display: block !important;
+    }
+
+    .autoship {
+        padding: 20px 10px;
+    }
+
+    .inner-option {
+        border-radius: 20px;
+        border: 1px solid #000;
+        padding: 11px 10px 10px;
+        cursor: pointer;
+    }
+
+    .offer-details .btn {
+        font-size: 15px;
+    }
+
+    .reviews {
+        padding: 20px 0;
+    }
+
+    .owl-prev {
+        display: none;
+    }
+
+    .owl-next {
+        display: none;
+    }
+
+    .them {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .transform h3 {
+        font-size: 28px;
+    }
+
+    .leaves h3 {
+        font-size: 28px;
+    }
+
+    .them h3 {
+        font-size: 28px;
+    }
+
+    .sufficient h3 {
+        font-size: 28px !important;
+    }
+
+    .offerpage h3 {
+        font-size: 28px;
+    }
+
+    .reviews h3 {
+        font-size: 24px;
+    }
+
+    .tabs-reviewws ul {
+        display: inline-block;
+    }
+
+    .tabs-reviews ul li {
+        width: 47%;
+        float: left;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .olympians {
+        padding: 30px 0;
+    }
+
+    .olympians h3 {
+        font-size: 28px !important;
+    }
+
+    .olympians-details {
+        margin-bottom: 30px;
+    }
+
+    .start {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        padding: 40px 0 20px;
+        background: #000;
+    }
+
+    .footer-social-media {
+        margin-bottom: 20px;
+    }
+
+    .footer-list {
+        margin-bottom: 20px;
+    }
+
+    .lastfooter {
+        margin-top: 20px;
+    }
+
+    .lastfooter img {
+        width: 250px;
+    }
+
+    .lastfooter img {
+        width: 170px;
+    }
+
+    .row.lastfooter {
+        text-align: left;
+    }
+
+    .ftr-infoclass p {
+        text-align: center;
+    }
+
+    .faqs h3 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .manage-top-baar {
+        text-align: center;
+    }
+
+    .transform {
+        padding: 30px 0;
+    }
+
+    .leaves {
+        padding: 20px 0px 20px 0px;
+    }
+
+    .offerpage {
+        padding: 20px 0;
+    }
+
+    .top-header {
+        font-size: 12px;
+        word-spacing: 0px;
+        padding: 5px 0px !important;
+    }
+
+    .logo img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .banner {
+        padding: 18px 0px 28px 0px;
+    }
+
+    .col-md-5.mainsec {
+        text-align: center;
+    }
+
+    .main-head {
+        font-size: 14px;
+        margin: 2px 0px 0px 0px;
+    }
+
+    .mainsec h2 {
+        font-size: 33px;
+        letter-spacing: 0px;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        line-height: normal;
+    }
+
+    .col-md-5.mainsec ul {
+        display: block !important;
+
+    }
+
+    .logo {
+        text-align: left !important;
+    }
+
+    .sticky-top {
+        background: #1EB9F0;
+        padding: 0px 0 10px;
+    }
+
+    .header button {
+        background: none;
+        border: 1px solid #ffeb00;
+        border-radius: 20px;
+        color: #000000;
+        font-size: 10px;
+        padding: 2px 8px 1px 8px;
+        margin: 0px 0px 0px 0px;
+        background: #ffeb00;
+        font-weight: 900;
+    }
+
     .webverion {
         display: none;
     }
