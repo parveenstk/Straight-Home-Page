@@ -1,5 +1,3 @@
-import { showToast, hideToast } from "./utils.js"
-
 // toaster Elements
 const toaster = document.getElementById('toaster');
 const toasterTitle = document.getElementById('toaster-title');
