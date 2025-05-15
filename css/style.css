@@ -118,6 +118,10 @@ strong {
     word-spacing: 3px;
 }
 
+.top-header strong {
+    -webkit-text-stroke: 0px black;
+}
+
 .sticky-top {
     background: #1EB9F0;
 }
@@ -978,6 +982,10 @@ left: 10px;*/
     color: #E6193C;
 }
 
+.red-color strong {
+    -webkit-text-stroke: 0.5px #E6193C;
+}
+
 .olympians-details p {
     margin-bottom: 5px;
     line-height: normal;
@@ -1194,11 +1202,11 @@ button.accordion-button {
         display: inline-block;
     }
 
-    .tabs-reviews ul li {
+    .tabs-reviewws ul li {
         width: 47%;
-        float: left;
-        margin-bottom: 10px;
-        margin-right: 10px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px 10px 0;
     }
 
     .olympians {
