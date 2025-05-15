@@ -20,6 +20,18 @@
 </head>
 
 <body>
+   <!-- Toaster Message -->
+   <div class="toaster hide" id="toaster">
+      <div id="timerline" class="timerline"></div>
+      <div class="inner-toaster">
+         <div>
+            <p class="toaster-success" id="toaster-title">Success !</p>
+            <p class="toaster-text" id="toaster-text">Your email is submitted successfully</p>
+         </div>
+         <div class="toaster-cross" id="toaster-cross"> <img alt="toaster-cross" width="40"> </div>
+      </div>
+   </div>
+
    <!-- Top Header -->
    <div class=" text-white py-2 top-header text-center">
       <span>✨ <strong>Sign up and save up to 52% OFF</strong> ✨</span>
@@ -1354,17 +1366,22 @@
             <div class="col-md-6">
                <div class="ftr-form">
                   <p>Join Our Newsletter</p>
+
                   <form class="row g-3">
+                     <!-- First Name -->
                      <div class="col-md-6">
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="First Name">
+                        <input type="name" class="form-control" id="first-name" placeholder="First Name"
+                           autocomplete="true">
                      </div>
+                     <!-- Email -->
                      <div class="col-md-6">
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Email">
+                        <input type="email" class="form-control" id="email-address" placeholder="Email">
                      </div>
                      <div class="col-12">
                         <button type="submit" class="btn btn-primary d-block w-100">Join</button>
                      </div>
                   </form>
+
                </div>
                <div class="footer-social-media">
                   <ul>
@@ -1473,6 +1490,7 @@
    <!-- import function scripts -->
    <script src="./js/carousel.js" type="text/javascript"></script>
    <script src="./js/offer.js"></script>
+   <script src="./js/toaster.js" type="module"></script>
 
    <script type="text/javascript">
       const triggerTabList = document.querySelectorAll('#myTab button')
