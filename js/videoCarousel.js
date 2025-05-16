@@ -1,4 +1,4 @@
-// carousel function  
+// video carousel function  
 
 jQuery("#carousel").owlCarousel({
     autoplay: false,
