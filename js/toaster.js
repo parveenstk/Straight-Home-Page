@@ -73,20 +73,21 @@ const emailInput = document.getElementById('email-address');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const email = emailInput.value;
-    const firstName = firstNameInput.value;
+    const firstName = firstNameInput.value.trim();
+    const email = emailInput.value.trim();
 
-    if (email && firstName) {
-        localStorage.setItem("submitted Email", emailInput.value);
+    if (firstName && email) {
+        localStorage.setItem("submittedName", firstName);
+        localStorage.setItem("submittedEmail", email);
         updateToaster('success');
-        autoHide();
     } else if (email) {
         updateToaster('warning1');
-        autoHide();
     } else if (firstName) {
         updateToaster('warning2');
-        autoHide();
-    } else updateToaster('error');
+    } else {
+        updateToaster('error');
+    }
+
     autoHide();
 
     emailInput.value = '';
