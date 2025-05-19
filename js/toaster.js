@@ -69,6 +69,8 @@ const toasterContent = {
 const form = document.querySelector("form");
 const firstNameInput = document.getElementById('first-name');
 const emailInput = document.getElementById('email-address');
+const emailInputtName = document.getElementById("email-address").getAttribute("name");
+const firstname = document.getElementById("first-name");
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -79,6 +81,7 @@ form.addEventListener('submit', (event) => {
     if (email && firstName) {
         localStorage.setItem("submitted Email", emailInput.value);
         updateToaster('success');
+        saveEmail(email, firstName)
         autoHide();
     } else if (email) {
         updateToaster('warning1');
@@ -92,6 +95,17 @@ form.addEventListener('submit', (event) => {
     emailInput.value = '';
     firstNameInput.value = '';
 })
+
+// API call to update the email addres in "excel sheet"
+const url = 'https://yomz-pages-data.vercel.app/api/data';
+// const url = 'http://localhost:3000/api/data';
+const saveEmail = async (email, firstname) => {
+    const response = await fetch(`${url}?email=${email}&firstName=${firstname}&sheetName=${emailInputtName}&column=!B5:D5`, {
+        method: 'GET'
+    }).then(res => res.json());
+
+    console.log("response:", response)
+};
 
 // Function to update toaster dynamically
 const updateToaster = (type) => {
